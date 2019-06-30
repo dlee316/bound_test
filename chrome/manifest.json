@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Bound Chrome Extension",
+  "description": "Bound Extension",
+  "version": "1.0",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js", "popup.js"]
+    }
+  ],
+  "permissions": ["storage"],
+
+  "browser_action": {
+    "default_icon": "letter-b.png",
+    "default_popup": "popup.html",
+    "default_title": "Bound Chrome Extension"
+  }
+}
